@@ -30,3 +30,12 @@
     transform: rotate(360deg);
   }
 }
+
+.claims{
+  background-color: #282c34;
+  color:white;
+}
+
+.container{
+  margin-top:30px;
+}
