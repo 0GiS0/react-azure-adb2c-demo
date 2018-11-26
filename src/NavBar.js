@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Menu } from 'semantic-ui-react'
-
+import AAD_B2CService from './AAD_B2CService';
 
 export default class NavBar extends Component {
     constructor(props) {
@@ -10,6 +10,7 @@ export default class NavBar extends Component {
             authenticated: null
         };
 
+        this.AzureADB2CService = new AAD_B2CService();
         this.isAuthenticated = this.isAuthenticated.bind(this);
         this.logout = this.logout.bind(this);
     }
@@ -20,12 +21,12 @@ export default class NavBar extends Component {
 
     isAuthenticated() {
         this.setState({
-            authenticated: true
+            authenticated: this.AzureADB2CService.loggedIn()
         });
     }
 
     logout() {
-
+        this.AzureADB2CService.logout()
     }
 
     render() {
