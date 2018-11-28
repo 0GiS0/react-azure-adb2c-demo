@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-//Azure AD B2C authentication https://www.azurefromthetrenches.com/using-reactjs-with-azure-ad-b2c/
 import authentication from 'react-azure-adb2c';
 require('dotenv').config();
 
